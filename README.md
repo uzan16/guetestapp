@@ -1,6 +1,6 @@
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript project for Fullstack Technical Test.
+[Nest](https://github.com/nestjs/nest) framework TypeScript project for Fullstack Technical Test.  
 This application using sqlite database.
 
 ## Installation
@@ -10,10 +10,10 @@ $ yarn install
 ```
 
 ## Config
-Duplicate .env.example file then rename it to .env
-Put value for JWT_KEY and HOST_PORT
-JWT_KEY is for JWT secret key
-HOST_PORT is for on which port the app will be running
+Duplicate .env.example file then rename it to .env  
+Put value for JWT_KEY and HOST_PORT  
+JWT_KEY is for JWT secret key  
+HOST_PORT is for on which port the app will be running  
 
 
 ## Do a migration
@@ -22,9 +22,9 @@ HOST_PORT is for on which port the app will be running
 $ yarn migration:run
 ```
 
-this will generate employee table, then insert 1 data:
-username: admin
-password: admin
+this will generate employee table, then insert 1 data:  
+username: admin  
+password: admin  
 
 ## Running the app
 
@@ -40,8 +40,8 @@ $ yarn run start:prod
 ```
 
 ## API Documentation
-All api using prefix /api
-Swagger documentation is on {host}/doc
+All api using prefix /api  
+Swagger documentation is on {host}/doc  
 
 ## License
 
