@@ -18,7 +18,7 @@ export class AdminController {
     if (page === undefined) {
       page = 1;
     }
-    return await this.employeeService.findAll(take, page);
+    return await this.employeeService.findAll(+take, +page);
   }
 
   @Get('add')

@@ -27,7 +27,13 @@ export class EmployeeController {
   @ApiOkResponse({
     type: PaginatedDto<Employee>
   })
-  findAll(@Query('take') take: number, @Query('page') page: number) {
+  findAll(@Query('take') take?: number, @Query('page') page?: number) {
+    if (take === undefined) {
+      take = 10;
+    }
+    if (page === undefined) {
+      page = 1;
+    }
     return this.employeeService.findAll(+take, +page);
   }
 
