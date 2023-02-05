@@ -1,0 +1,32 @@
+{{#> management}}
+  {{#*inline "content"}}
+    <button class="btn add" onclick="location.href='admin/add'">Tambah</button>
+    <table class="simple-table">
+        <tr>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th></th>
+        </tr>
+
+        {{#each data}}
+            <tr>
+                <td>{{ username }}</td>
+                <td>{{ fullname }}</td>
+                <td align="center">
+                    <button class="btn" onclick="location.href='admin/edit?id={{id}}'">Edit</button>
+                    <button class="btn" onclick="location.href='admin/remove?id={{id}}'">Delete</button>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+    <div class="pagination-wrapper">
+        <div class="pagination">
+            <a href="admin">&laquo;</a>
+            {{#each paginations}}
+                <a class="{{#if active}}active{{/if}}" href="admin?page={{page}}">{{page}}</a>
+            {{/each}}
+            <a href="admin?page={{totalPage}}">&raquo;</a>
+        </div>
+    </div>
+  {{/inline}}
+{{/management}}

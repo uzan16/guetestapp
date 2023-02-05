@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Employee App</title>
+    <style type="text/css">
+        body {
+            background-color: #fff;
+            margin: 40px;
+            font: 13px/20px normal Helvetica, Arial, sans-serif;
+            color: #4F5155;
+        }
+        #body {
+            margin: 0 15px 0 15px;
+            min-height: 96px;
+        }
+        #container {
+            margin: 10px;
+            border: 1px solid #D0D0D0;
+            box-shadow: 0 0 8px #D0D0D0;
+        }
+
+        h1 {
+            color: #444;
+            background-color: transparent;
+            border-bottom: 1px solid #D0D0D0;
+            font-size: 19px;
+            font-weight: normal;
+            margin: 0 0 14px 0;
+            padding: 14px 15px 10px 15px;
+        }
+
+        .simple-table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .simple-table td, .simple-table th {
+            border: 1px solid #BDBDBD;
+            padding: 8px;
+        }
+
+        .simple-table tr:nth-child(even){background-color: #ECEFF1;}
+
+        .simple-table tr:hover {background-color: #E0E0E0;}
+
+        .simple-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #00796B;
+            color: white;
+        }
+
+        p.footer {
+            text-align: right;
+            font-size: 11px;
+            border-top: 1px solid #D0D0D0;
+            line-height: 32px;
+            padding: 0 10px 0 10px;
+            margin: 20px 0 0 0;
+        }
+
+        .btn {
+            background-color: #2a9d8f; /* Green */
+            border: none;
+            border-radius: 4px;
+            color: white;
+            padding: 4px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .btn.add {
+            font-size: 1.25em;
+            float: right;
+            padding: 8px 16px;
+        }
+
+        input[type=text], select, input[type=number], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            background-color: #2a9d8f; /* Green */
+            border: none;
+            color: white;
+            border-radius: 4px;
+            padding: 6px 18px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.25em;
+            font-weight: bold;
+            margin: 4px 2px;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+
+        input[type=submit]:hover {
+            background-color: #268A7F;
+        }
+
+        form {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+        }
+
+        .pagination a.active {
+            background-color: #2a9d8f;
+            color: white;
+            border: 1px solid #2a9d8f;
+        }
+
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+
+        .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .pagination-wrapper {
+            text-align: end;
+            margin-top: 2em;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Employee App</h1>
+
+      <div id="body">
+        {{> content}}
+      </div>
+
+      <p class="footer">GUE Ecosystem Employee Test App</p>
+    </div>
+
+  </body>
+</html>
